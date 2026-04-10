@@ -11,25 +11,29 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1282503507098924');
+fbq('init', '1448517003086922');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1448517003086922&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F Traders</title>
+<title>Brothers Traders</title>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     background-color: #121212;
     color: #ffd700;
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     text-align: center;
     overflow-x: hidden;
   }
@@ -40,9 +44,28 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 
+  /* লোগো স্টাইল - ক্লিকযোগ্য বোঝানোর জন্য */
+  .custom-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px #ffd700);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 5px;
+  }
+  
+  .custom-logo:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 12px #ffd700);
+    background: rgba(255, 215, 0, 0.2);
+  }
+
   h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     animation: fadeIn 1.5s ease-in-out;
@@ -78,7 +101,10 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     margin: 20px auto;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     transition: all 0.4s ease;
   }
 
@@ -118,13 +144,57 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     font-size: 1rem;
   }
 
+  /* ফুটার স্টাইল - এখন লেখার সাথে মিল রেখে */
   footer {
     margin: 50px 0 30px;
-    font-size: 0.9rem;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .copyright-text {
+    letter-spacing: 0.3px;
+    font-size: 0.85rem;
     color: #888;
   }
 
-  /* Additional visual enhancements */
+  /* টেলিগ্রাম আইকন - লেখার সাইজের সাথে মিল রেখে */
+  .telegram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(255, 215, 0, 0.3);
+    flex-shrink: 0;
+  }
+
+  .telegram-link:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, #ff8c00, #ffd700);
+  }
+
+  .telegram-link img {
+    width: 14px;
+    height: 14px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+  }
+
+  .telegram-link:hover img {
+    transform: scale(1.1);
+  }
+
   .icon-container {
     margin: 20px 0;
   }
@@ -140,24 +210,80 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
   .icon-container img:hover {
     transform: scale(1.2);
   }
-  .footer-icon {
-  height: 20px;
-  vertical-align: middle;       /* বেসলাইন রাখো */
-  margin-left: 5px;             /* বাম দিকে সামান্য সরানো */
-  position: relative;
-  top: -2px;                    /* ← উপরে তোলা ( -1px বা -3px চাইলে অ্যাডজাস্ট করো) */
-  transition: transform 0.3s ease;
-}
 
-.footer-icon:hover {
-  transform: scale(1.2);
-}
+  /* ডেস্কটপে */
+  @media (min-width: 769px) {
+    footer {
+      gap: 10px;
+    }
+    .copyright-text {
+      font-size: 0.9rem;
+    }
+    .telegram-link {
+      width: 24px;
+      height: 24px;
+    }
+    .telegram-link img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  /* মোবাইলে - আর বড় হবে না */
+  @media (max-width: 768px) {
+    .custom-logo {
+      width: 60px;
+      height: 60px;
+    }
+    h1 {
+      font-size: 1.6rem;
+    }
+    .join-btn {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+    }
+    footer {
+      gap: 6px;
+    }
+    .copyright-text {
+      font-size: 0.75rem;
+    }
+    .telegram-link {
+      width: 20px;
+      height: 20px;
+    }
+    .telegram-link img {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  /* খুব ছোট মোবাইলের জন্য */
+  @media (max-width: 480px) {
+    footer {
+      gap: 5px;
+    }
+    .copyright-text {
+      font-size: 0.7rem;
+    }
+    .telegram-link {
+      width: 18px;
+      height: 18px;
+    }
+    .telegram-link img {
+      width: 13px;
+      height: 13px;
+    }
+  }
 </style>
 </head>
 
 <body>
   <header>
-    <h1>F Traders</h1>
+    <!-- কাস্টম লোগো - ক্লিক করলেও টেলিগ্রামে যাবে -->
+    <img class="custom-logo" src="https://raw.githubusercontent.com/kamilhussen24/Your-Ads/refs/heads/main/IMG_20260410_132400_333.jpg"
+         alt="Brothers Traders Logo" onclick="joinChannels()">
+    <h1>Brothers Traders</h1>
   </header>
 
   <div class="main-text">
@@ -172,11 +298,11 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
   </div>
 
   <button class="join-btn" onclick="joinChannels()">
-  <img src="https://img.icons8.com/ios-filled/50/telegram.png" 
-       alt="telegram" 
-       style="height: 28px; vertical-align: middle; margin-right: 10px; filter: invert(1);" />
-  JOIN NOW
-</button>
+    <img src="https://img.icons8.com/ios-filled/50/telegram.png" 
+         alt="telegram" 
+         style="height: 24px; vertical-align: middle; filter: invert(1);" />
+    JOIN NOW
+  </button>
   <hr>
 
   <div class="privacy-box">
@@ -189,34 +315,30 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
   </div>
 
   <footer>
-  © 2026 Ads By KDex 
-  <a href="https://t.me/+DIKkgKBpsDE4ZWI9" target="_blank" style="text-decoration: none;">
-    <img src="https://img.icons8.com/ios-filled/50/ffd700/telegram-app.png" 
-         alt="Telegram" 
-         class="footer-icon">
-  </a>
-</footer>
+    <span class="copyright-text">© 2026 Ads By KDex</span>
+    <a href="https://t.me/+DIKkgKBpsDE4ZWI9" target="_blank" rel="noopener noreferrer" class="telegram-link" title="Join our Telegram">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram">
+    </a>
+  </footer>
 
   <script>
+    // Telegram গ্রুপের লিংক
+    const TELEGRAM_LINK = 'https://t.me/+cKwJWW9KObxjOTZl';
+    
     function joinChannels() {
-    fbq('track', 'Purchase', {
-    value: 100,
-    currency: 'BDT'
-  });
-      // প্রথম Telegram চ্যানেল খুলবে (নতুন ট্যাবে)
-      window.open('https://t.me/+cKwJWW9KObxjOTZl', '_blank');
-
-      // কাউন্টডাউন শুরু
-      let seconds = 2;
-
-      const countdown = setInterval(() => {
-        seconds--;
-        if (seconds <= 0) {
-          clearInterval(countdown);
-          // popup block এড়াতে redirect এই ট্যাবেই হবে
-          window.location.href = 'https://t.me/+cKwJWW9KObxjOTZl';
-        }
-      }, 1000);
+      // Facebook Pixel ইভেন্ট
+      fbq('track', 'Purchase', {
+        value: 100,
+        currency: 'BDT'
+      });
+      
+      // প্রথমে নতুন ট্যাবে Telegram খোলা
+      window.open(TELEGRAM_LINK, '_blank');
+      
+      // স্মার্ট টেকনিক: 2 সেকেন্ড পর বর্তমান ট্যাবেও খোলা হবে
+      setTimeout(function() {
+        window.location.href = TELEGRAM_LINK;
+      }, 2000);
     }
   </script>
 </body>
